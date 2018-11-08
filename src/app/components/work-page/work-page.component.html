@@ -1,0 +1,50 @@
+
+  <section class="load fadeInLeft work" *ngFor="let work of works">
+    <nav class="menu_top bg">
+      <ul class="grid grid--alignMiddle grid--alignSpaceAround">
+        <li><a routerLink="/" id="go_home">back to home</a></li>
+        <li><h2 class="titre">{{work.name}}</h2></li>
+        <li><a routerLink="/about" id="about">About me & contact</a></li>
+      </ul>
+    </nav>
+    <section class="{{work.section_class}} swiper-container works" [swiper]="config" [(index)]="index">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide grid grid--alignCenter grid--alignMiddle" *ngFor="let img of work.images">
+          <img src="{{img.image}}"/>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+    <div class="role grid grid--alignSpaceAround grid--alignMiddle grid--noWrap">
+      <span>Client: {{work.client}}</span>
+      <span>Role : {{work.role}}</span>
+      <span>Date: {{work.date}}</span>
+    </div>
+    <div class="contact grid grid--alignCenter grid--alignMiddle">
+      <a *ngIf="work.href; else not_online" target="_blank" class="titre btn" href="{{work.href}}">
+        Go to site
+      </a>
+      <ng-template #not_online>
+        <div class="not-online">
+          Sorry but this website is no longer online  ¯\(◉‿◉)/¯
+        </div>
+      </ng-template>
+    </div>
+    <div class="prez">
+      <div>
+        <h2>Description</h2>
+        <p>
+          {{work.description}}
+        </p>
+      </div>
+    </div>
+    <div class="next {{work.next_class}} grid grid--alignCenter grid--alignMiddle">
+      <div>
+        <a routerLink="/{{work.next_link}}">
+          <h2>next project</h2>
+          <h3>{{work.next_label}}</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+

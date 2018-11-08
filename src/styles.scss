@@ -1,0 +1,192 @@
+@import "./app/styles/variables";
+@import "./app/styles/flex_grid";
+@import "./app/styles/general";
+@import "./app/styles/typo";
+@import "./app/styles/buttons";
+@import "./app/styles/colors";
+
+@import "./app/styles/supports";
+@import "./app/styles/animations";
+
+.works{
+  background-position:center;
+}
+.w1 h1,.w2 h1,.w3 h1,.w4 h1, .w5 h1{
+  @include responsive-font(5vw, 25px, 50px);
+  letter-spacing: 30px; text-indent: 30px;
+  margin: 35px 0;
+}
+.w1{
+  background-image: url("./app/assets/images/base_blured.png");
+}
+.w1b{
+  background-image: url("./app/assets/images/base_blured2.png");
+}
+.w2{
+  background-image: url("./app/assets/images/jim_blured.png");
+}
+.w3{
+  background-image: url("./app/assets/images/T_A-youtube_1000_500.jpg");
+}
+.w4{
+  background-image: url("./app/assets/images/Daniel-Bodi-Portfolio_blured.jpg");
+}
+.w5{
+  background-image: url("./app/assets/images/Auto-Ecole-Starter_blured.jpg");
+}
+.prez,
+.cv,
+.contact{
+  position: relative;
+  z-index: 4;
+}
+.prez{
+  height: 20%;
+  text-align: center;
+  width: 100%;
+}
+.controls{
+  text-align: center;
+  width: 100%;
+  background: rgba(30,30,30,1);
+}
+.role + .prez,
+.controls{
+  padding: 90px 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.works.swiper-container{
+  height: 65%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.works img{
+  max-height: 500px;
+  max-width: 1000px;
+  position: relative;
+  width: 100%;
+}
+.menu_top{
+  position: relative;
+  z-index:5;
+  color: white;
+  display: block;
+  width: 100%;
+  opacity: 0.95;
+  height: 7%;
+  background: rgb(57, 58, 110);
+  text-transform: uppercase;
+  @include responsive-font(2vw, 14px, 30px);
+}
+.about .menu_top{
+  background: none;
+}
+.menu_top ul{
+  width: 100%;
+  height: 100%;
+}
+.menu_top li{
+  position: relative;
+  text-align: center;
+
+}
+.menu_top li:first-child{text-align: left;}
+.menu_top li:last-child{text-align: right;}
+.menu_top li a,
+.menu_top li span{
+  color: rgba(255,255,255,1);
+  cursor: pointer;
+}
+.menu_top li a{
+  color: rgba(255,255,255,0.7);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.menu_top li a:hover{
+  text-decoration: underline;
+  color: rgba(255,255,255,1);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.load {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.load .role,
+.load .screenshots,
+.load .next{
+  text-align: center;
+  background-size: cover;
+}
+.load .role{
+  height: 10%;
+  background: white;
+}
+
+.load .role span{
+  padding: 0 10px;
+  letter-spacing: 1px;
+  color: rgba(30,30,30,0.7);
+  text-align:center;
+  text-transform: uppercase;
+}
+.load .screenshots{
+  height: auto;
+  background: rgba(50,50,50,0.20);
+}
+.contact + .prez{
+  padding: 0 0 80px;
+}
+.work .prez h2{
+  margin:40px 0;
+}
+.load .next{
+  text-align: center;
+  width: 100%;
+  height: 15%;
+  margin: 0;
+  transition-duration: 0.2s;
+}
+.load .next:hover{
+  margin: 10px;
+  width: calc(100% - 20px);
+  transition-duration: 0.2s;
+}
+.load .next.w1 h2,
+.load .next.w1 h3,
+.load .next.w2 h2,
+.load .next.w2 h3,
+.load .next.w3 h2,
+.load .next.w3 h3,
+.load .next.w4 h2,
+.load .next.w4 h3,
+.load .next.w5 h2,
+.load .next.w5 h3{
+  color: rgba(255,255,255,0.7);
+  margin: 10px 0;
+}
+.load .next.w1 h3,
+.load .next.w2 h3,
+.load .next.w3 h3,
+.load .next.w4 h3,
+.load .next.w5 h3{
+  opacity: 0.4
+}
+.load .menu_top.bg h2,
+.not-online{
+  color: white
+}
+.work .prez p{
+  padding: 0 20px;
+  max-width: 500px;
+  margin: auto;
+  text-align: justify;
+}
+.jimmobile {
+  background: rgba(50,50,50,0.3);
+}
+
+@import "./app/styles/mediaqueries";

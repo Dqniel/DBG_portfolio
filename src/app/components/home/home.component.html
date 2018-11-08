@@ -1,0 +1,20 @@
+<div class="main swiper-container" [swiper]="config" [(index)]="index">
+  <div class="swiper-wrapper">
+    <section *ngFor="let page of pages, index as i"
+             class="w{{i}} swiper-slide section"
+             id="section{{i+1}}"
+             [ngClass]="{'background_anim bg': i==0}">
+      <div class="bg_container" [ngClass]="{'bounceInDown': i==0}">
+        <h3 class="titre" *ngIf="i==0">{{page.salute}}</h3>
+        <h1 class="titre">{{page.section}}</h1>
+        <h3 class="titre">{{page.description}}</h3>
+        <a class="titre btn" routerLink="/{{page.c2a_link}}" id="{{page.c2a_link}}">{{page.c2a_label}}</a>
+      </div>
+      <a class="titre scroll swiper-button-next">
+        <span></span>
+        {{page.next_label}}
+      </a>
+    </section>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>

@@ -1,0 +1,92 @@
+.btn{
+  display: block;
+  max-width: 220px;
+  background: white;
+  border-radius: 50px;
+  color: rgb(36, 33, 57);
+  cursor: pointer;
+  text-transform: uppercase;
+  border:1px solid white;
+  padding: 12px 20px;
+  letter-spacing: 3px;
+  @include responsive-font(1.5vw, 15px, 20px);
+  margin:50px auto;
+  position: relative;
+  z-index: 5;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+.contact .btn{
+  margin:auto;
+}
+.btn:hover{
+  background:rgba(255,255,255,0);
+  color: white;
+  transition: all .6s;
+}
+.scroll{
+  bottom: 3%;
+  top: auto;
+  right: auto;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+  padding-top: 60px;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  width: 150px;
+  @include responsive-font(0.5vw, 13px, 20px);
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.5);
+  transition: all .6s;
+  background: none;
+}
+.scroll:hover {
+  color: rgb(255,255,255);
+  transition: all .6s;
+}
+.scroll span {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50px;
+  box-sizing: border-box;
+  transition: all .6s;
+}
+.scroll:hover span {
+  border: 2px solid rgb(255,255,255);
+  transition: all .6s;
+}
+.scroll span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color:rgba(255,255,255,0.5);
+  border-radius: 100%;
+  animation: scroll 2s infinite;
+  box-sizing: border-box;
+  transition: all .6s;
+}
+.scroll:hover span:before {
+  background-color: rgb(255,255,255);
+  transition: all .6s;
+}
+
+.btn--secondary{
+  color: rgb(57, 58, 110);
+  border:0;
+  background: none;
+  text-align: center;
+  &:hover {
+    background: rgb(57, 58, 110);
+    color: rgb(234, 234, 234)
+  }
+}
+

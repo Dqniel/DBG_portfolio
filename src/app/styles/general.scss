@@ -1,0 +1,53 @@
+*{
+  margin:0;
+  padding:0;
+  list-style: none;
+  border:0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Oswald";
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+section{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background_anim{
+  background: rgb(63, 59, 117);
+}
+.bg_container{
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  z-index: 2;
+}
+canvas{
+  position: absolute;
+  max-height: 100%;
+}
+.contact{
+  height: 15%;
+  width: 100%;
+  background: rgb(57, 58, 110);
+  text-align: center;
+}
