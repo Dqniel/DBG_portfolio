@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import {BaseComponent} from './components/base/base.component';
 import {AboutMeComponent} from './components/about-me/about-me.component';
 import {JimMobileComponent} from './components/jim-mobile/jim-mobile.component';
-import {SopraComponent} from './components/sopra/sopra.component';
 import {StarterComponent} from './components/starter/starter.component';
 import {TechasiaComponent} from './components/techasia/techasia.component';
 import {OldPortfolioComponent} from './components/old-portfolio/old-portfolio.component';
@@ -15,7 +14,6 @@ const routes: Routes = [
   { path: 'about', component: AboutMeComponent},
   { path: 'base', component: BaseComponent},
   { path: 'jim', component: JimMobileComponent},
-  { path: 'sopra', component: SopraComponent},
   { path: 'starter', component: StarterComponent},
   { path: 'techasia', component: TechasiaComponent},
   { path: 'old-portfolio', component: OldPortfolioComponent},
