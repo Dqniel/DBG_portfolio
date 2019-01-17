@@ -28,26 +28,17 @@ section{
 
 }
 .section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 .background_anim{
   background: rgb(63, 59, 117);
 }
 .bg_container{
   text-align: center;
-  display: flex;
-  flex-flow: column wrap;
   z-index: 2;
 }
 canvas{
   position: absolute;
   max-height: 100%;
 }
-.contact{
-  height: 15%;
-  width: 100%;
-  background: rgb(57, 58, 110);
-  text-align: center;
-}
+

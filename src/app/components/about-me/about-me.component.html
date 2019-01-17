@@ -1,75 +1,53 @@
-<section class="load about">
-  <div class="background_anim grid__col--noGrow">
-    <nav class="menu_top">
-      <ul class="grid grid--alignMiddle grid--alignSpaceAround">
-        <li><a routerLink="/" id="go_home">back to home</a></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </nav>
+<section class="about">
+  <div class="about__header background_anim">
+    <a routerLink="/" id="go_home">back to home</a>
     <h1 class="titre">About me</h1>
   </div>
-  <div class="prez bounceInRight grid grid--alignCenter grid--alignMiddle .grid__col--noGrow">
-    <div>
-      <h2>Hello, i'm Daniel Bodi</h2>
-      <p>
+  <div class="about__presentation bounceInRight">
+    <h2>Hello, i'm Daniel Bodi</h2>
+    <p>
         I'm a 33 years old UI Designer & Developer<br/>
         I live in Braine-le-Comte in Belgium
-      </p>
-    </div>
+    </p>
   </div>
-  <div class="cv grid grid--alignCenter grid--alignMiddle .grid__col--grow">
-    <div class="wrapper">
-      <h3 class="titre-h3">Skills</h3>
-      <div class="skills grid grid--alignCenter">
-        <ul class="dev">
-          <li>
-            <p>
-              <span class="skill">JS :</span>
-              <span>Jquery, Angular 6+, Webpack</span>
-            </p>
+  <div class="about__cv">
+
+      <h3 class="titre-h3 about__titleSkills">Skills</h3>
+      <ul class="about__skillsDev">
+          <li class="about__skillsDevJs">
+            <span class="about__skillLabel">JS :</span>
+            <span class="about__skill">Jquery, Angular 6+, VueJS, Webpack</span>
           </li>
-          <li>
-            <p>
-              <span class="skill">css3 :</span>
-              <span>Foundation, Bootstrap, Sass, Less</span>
-            </p>
+          <li class="about__skillsDevCss">
+            <span class="about__skillLabel">css3 :</span>
+            <span class="about__skill">Foundation, Bootstrap, Sass, Less</span>
           </li>
-          <li>
-            <p>
-              <span class="skill">html5</span>
-            </p>
+          <li class="about__skillsDevHtml">
+            <span class="about__skillLabel">html5</span>
           </li>
         </ul>
-        <ul class="design">
-          <li><p><span class="skill">Sketch</span></p></li>
-          <li><p><span class="skill">Photoshop</span></p></li>
-          <li><p><span class="skill">Illustrator</span></p></li>
-          <li><p><span class="skill">Indesign</span></p></li>
+      <ul class="about__skillsDesign">
+          <li class="about__skillSketch">Sketch</li>
+          <li class="about__skillPhotoshop">Photoshop</li>
+          <li class="about__skillIllustrator">Illustrator</li>
+          <li class="about__skillIndesign">Indesign</li>
         </ul>
+      <h3 class="titre-h3 about__titleKnowledge">Knowledge</h3>
+      <p class="about__keywords">
+        Design systems, Atomic Design, Scrum methodology, BEM methodology, adaptive & responsive design, cross-browser design, css layouting (Flex, Grid), User Inteface, User Experience, 2D Animation
+      </p>
+      <h3 class="titre-h3 about__titleLanguages">Languages</h3>
+      <div class="about__languages">
+        <p class="about__lanuage">Spanish</p>
+  			<p class="about__lanuage">French</p>
+  			<p class="about__lanuage">English</p>
       </div>
-      <div class="keywords">
-        <h3 class="titre-h3">Knowledge</h3>
-        <p>
-  					<span>
-  						Design systems, Atomic Design, Scrum methodoly, BEM methodology, adaptive & responsive design, cross-browser design, css layouting (Flex, Grid), User Inteface, User Experience, 2D Animation
-  					</span>
-        </p>
-      </div>
-      <div class="languages">
-        <h3 class="titre-h3">Languages</h3>
-        <p class="grid grid--alignMiddle">
-          <span class="grid__col grid__col--no-padding">Spanish</span>
-  				<span class="grid__col grid__col--no-padding">French</span>
-  				<span class="grid__col grid__col--no-padding">English</span>
-        </p>
-      </div>
-      <div class="download_cv grid grid--alignMiddle grid--alignCenter">
+      <div class="about__downloadCv">
         <a target="_blank" class="btn btn--secondary" href="app/assets/images/BODI Daniel CV.pdf">Download my cv</a>
       </div>
-    </div>
+    
   </div>
-  <div class="contact grid grid--alignCenter grid--alignMiddle grid__col--noGrow">
+  <div class="about__contact">
       <a class="btn" href="mailto:contact@danielbodigil.com">
         Contact me
       </a>

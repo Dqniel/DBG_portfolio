@@ -59,7 +59,7 @@ h3{
 }
 .about h1,
 .load h1{
-  @include responsive-font(7vw, 20px, 100px);
+  @include responsive-font(7vw, 20px, 60px);
   letter-spacing: 30px;
 }
 .about h2,
