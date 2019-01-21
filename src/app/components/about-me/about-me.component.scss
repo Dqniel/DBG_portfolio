@@ -9,48 +9,94 @@
 .about__header,
 .about__presentation {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 2fr;
-  grid-gap: 10px 10px;
+  grid-template-rows: 30px 1fr;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 5px 0;
+}
+.about__presentation-content {
+  text-align: center;
 }
 .about__cv {
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr 2fr repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70px 1fr 1fr 70px 1fr repeat(3, 70px);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
-    "skillsTitle skillsTitle skillsTitle"
-    "devSkills . designSkills"
-    "knowledgeTitle knowledgeTitle knowledgeTitle"
-    "knowledge knowledge knowledge"
-    "languageTitle languageTitle languageTitle"
-    "language language language"
-    "down down down";
-
+    ". skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle ."
+    ". devSkills devSkills devSkills devSkills devSkills devSkills devSkills devSkills devSkills devSkills ."
+    ". designSkills designSkills designSkills designSkills designSkills designSkills designSkills designSkills designSkills designSkills ."
+    ". knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle ."
+    ". knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge ."
+    ". languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle . "
+    ". language language language language language language language language language language ."
+    ". down down down down down down down down down down .";
+  align-content: center;
+  padding: 20px;
   background: rgba(50,50,50,0.1);
  }
 .about__titleSkills {
   grid-area: skillsTitle;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 .about__skillsDev {
+  display: grid;
   grid-area: devSkills;
+  justify-content: start;
+  align-content: end;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 10px;
 }
 .about__skillsDesign {
+  display: grid;
   grid-area: designSkills;
+  align-content: start;
+  padding-top: 10px;
 }
 .about__titleKnowledge {
   grid-area: knowledgeTitle;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 .about__keywords {
   grid-area: knowledge;
+  display: grid;
+  align-items: center;
 }
 .about__titleLanguages {
   grid-area: languageTitle;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 .about__languages {
   grid-area: language;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  grid-template-areas: "spanish french english";
+  & p {
+    grid-area: french;
+    &:first-child {
+      justify-self: self-start;
+      grid-area: spanish;
+    }
+    &:last-of-type {
+      justify-self: self-end;
+      grid-area: english;
+    }
+  }
 }
 .about__downloadCv {
   grid-area: down;
+  display: grid;
+  justify-items: center;
+  align-content: center;
 }
 .about__skills {
   color: rgb(57, 58, 110);
@@ -59,7 +105,10 @@
 .about__keywords {
   text-align: justify;
 }
-
+.about__skillLabel {
+  color: #393a6e;
+  text-transform: uppercase;
+}
 .about__languages span {
   text-align: center;
   border-width: 0 1px 0 1px;
@@ -87,6 +136,13 @@
 .about__contact{
   background: rgb(57, 58, 110);
   text-align: center;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+.about__contact-btn {
+
 }
 .about__contact div{
 

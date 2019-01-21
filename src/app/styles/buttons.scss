@@ -1,21 +1,22 @@
 .btn{
-  display: block;
+  @include responsive-font(1.5vw, 15px, 20px);
   max-width: 220px;
   background: white;
   border-radius: 50px;
-  color: rgb(36, 33, 57);
+  color: #242139;
   cursor: pointer;
   text-transform: uppercase;
-  border:1px solid white;
+  border: 1px solid white;
   padding: 12px 20px;
   letter-spacing: 3px;
-  @include responsive-font(1.5vw, 15px, 20px);
-  //margin:50px auto;
   position: relative;
   z-index: 5;
-  -webkit-transition: all .6s;
   transition: all .6s;
+  min-width: 185px;
+  text-align: center;
+  height: 45px;
 }
+
 .contact .btn{
   margin:auto;
 }
