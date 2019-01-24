@@ -46,7 +46,7 @@ h1{
   letter-spacing: 10px; text-indent: 10px;
 }
 h2{
-  @include responsive-font(3vw, 20px, 40px);
+  @include responsive-font(3vw, 18px, 40px);
   letter-spacing: 2px; text-indent: 2px;
 }
 h3{
@@ -60,7 +60,7 @@ h3{
 .about h1,
 .load h1{
   @include responsive-font(7vw, 20px, 60px);
-  letter-spacing: 30px;
+  letter-spacing: 15px; text-indent: 15px;
 }
 .about h2,
 .about h3,

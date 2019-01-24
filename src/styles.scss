@@ -15,6 +15,19 @@
   letter-spacing: 30px; text-indent: 30px;
   margin: 35px 0;
 }
+.main,
+.w1,
+.w2,
+.w3,
+.w4,
+.w5 .background_anim,
+.bg_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 .w1{
   background-image: url("./app/assets/images/base_blured.png");
 }
@@ -79,9 +92,6 @@
   background: rgb(57, 58, 110);
   text-transform: uppercase;
   @include responsive-font(2vw, 14px, 30px);
-}
-.about .menu_top{
-  background: none;
 }
 .menu_top ul{
   width: 100%;

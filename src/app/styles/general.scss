@@ -19,6 +19,7 @@ html, body{
 }
 
 section{
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center center;
@@ -28,7 +29,9 @@ section{
 
 }
 .section {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .background_anim{
   background: rgb(63, 59, 117);

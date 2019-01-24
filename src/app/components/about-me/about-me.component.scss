@@ -1,11 +1,12 @@
 @import "variables";
+@import "typo";
 
 .about {
   position: relative;
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(2, 1.5fr) auto 1fr;
+  grid-template-rows: repeat(2, 1fr) auto 1fr;
   grid-template-columns: 1fr
 }
 .about__header,
@@ -32,6 +33,7 @@
   width: 100%;
   margin-left: 40px;
   text-align: left;
+  @include responsive-font(1.5vw, 13px, 20px);
   &:hover{
       text-decoration: underline;
       color: white;
@@ -40,7 +42,7 @@
 }
 .about__cv {
   display: grid;
-  grid-template-rows: 50px 1fr 1fr 50px 1fr repeat(3, 50px);
+  grid-template-rows: 50px 1fr 1fr 50px 1fr repeat(2, 50px) 1fr;
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
     ". skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle ."
@@ -55,7 +57,7 @@
   padding: 20px;
   background: rgba(50,50,50,0.1);
   @media screen and (min-width: $medium) {
-    grid-template-rows: 50px 1fr 50px 1fr repeat(3, 50px);
+    grid-template-rows: 50px 1fr 50px 1fr repeat(2, 50px) 1fr;
     grid-template-areas:
       ". skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle ."
       ". devSkills devSkills devSkills devSkills devSkills designSkills designSkills designSkills designSkills designSkills ."
@@ -159,7 +161,6 @@
   color: #393a6e;
   text-transform: uppercase;
 }
-
 .about__devSkills{
   text-align: left
 }
@@ -167,8 +168,9 @@
   text-align: right;
   border-left: 1px solid rgb(196, 196, 196);
 }
-.about__downloadCv {
-
+.about__skillsDev,
+.about__skillsDesign {
+  @include responsive-font(2vw, 15px, 25px);
 }
 .about__contact{
   background: rgb(57, 58, 110);
@@ -177,11 +179,5 @@
   align-content: center;
   justify-content: center;
   padding: 15px 0;
-}
-.about__contact-btn {
-
-}
-.about__contact div{
-
 }
 
