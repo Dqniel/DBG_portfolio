@@ -1,7 +1,9 @@
+@import "variables";
+
 .about {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-rows: repeat(2, 1.5fr) auto 1fr;
   grid-template-columns: 1fr
@@ -9,18 +11,36 @@
 .about__header,
 .about__presentation {
   display: grid;
-  grid-template-rows: 30px 1fr;
+  grid-template-columns: 1fr;
   justify-content: center;
   justify-items: center;
   align-items: center;
-  padding: 5px 0;
-}
-.about__presentation-content {
+  padding: 20px 0;
   text-align: center;
+}
+.about__presentation {
+  grid-template-rows: repeat(2, 1fr);
+}
+.about__header {
+  grid-template-rows: 30px 1fr 30px;
+}
+.about__back-link {
+  color: rgba(255, 255, 255, 0.7);
+  transition-duration: 0.2s;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 40px;
+  text-align: left;
+  &:hover{
+      text-decoration: underline;
+      color: white;
+      transition-duration: 0.2s;
+  }
 }
 .about__cv {
   display: grid;
-  grid-template-rows: 70px 1fr 1fr 70px 1fr repeat(3, 70px);
+  grid-template-rows: 50px 1fr 1fr 50px 1fr repeat(3, 50px);
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
     ". skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle ."
@@ -34,32 +54,55 @@
   align-content: center;
   padding: 20px;
   background: rgba(50,50,50,0.1);
+  @media screen and (min-width: $medium) {
+    grid-template-rows: 50px 1fr 50px 1fr repeat(3, 50px);
+    grid-template-areas:
+      ". skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle skillsTitle ."
+      ". devSkills devSkills devSkills devSkills devSkills designSkills designSkills designSkills designSkills designSkills ."
+      ". knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle knowledgeTitle ."
+      ". knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge ."
+      ". languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle languageTitle . "
+      ". language language language language language language language language language language ."
+      ". down down down down down down down down down down .";
+  }
  }
-.about__titleSkills {
-  grid-area: skillsTitle;
+%about__titles {
   display: grid;
   justify-content: center;
   align-items: center;
+}
+.about__titleSkills {
+  grid-area: skillsTitle;
+  @extend %about__titles;
 }
 .about__skillsDev {
   display: grid;
   grid-area: devSkills;
   justify-content: start;
   align-content: end;
-  border-bottom: 1px solid #c4c4c4;
+  border-width: 0px 0px 1px 0;
+  border-style: solid;
+  border-color: #c4c4c4;
   padding-bottom: 10px;
+  @media screen and (min-width: $medium) {
+    border-width: 0px 1px 0 0;
+    border-style: solid;
+    border-color: #c4c4c4;
+  }
 }
 .about__skillsDesign {
   display: grid;
   grid-area: designSkills;
   align-content: start;
   padding-top: 10px;
+  @media screen and (min-width: $medium) {
+    justify-items: end;
+    justify-content: end;
+  }
 }
 .about__titleKnowledge {
   grid-area: knowledgeTitle;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  @extend %about__titles;
 }
 .about__keywords {
   grid-area: knowledge;
@@ -68,9 +111,7 @@
 }
 .about__titleLanguages {
   grid-area: languageTitle;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  @extend %about__titles;
 }
 .about__languages {
   grid-area: language;
@@ -80,16 +121,25 @@
   justify-items: center;
   align-content: center;
   grid-template-areas: "spanish french english";
-  & p {
-    grid-area: french;
-    &:first-child {
-      justify-self: self-start;
-      grid-area: spanish;
-    }
-    &:last-of-type {
-      justify-self: self-end;
-      grid-area: english;
-    }
+}
+.about__language {
+  grid-area: french;
+  width: 100%;
+  text-align: center;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: rgb(196, 196, 196);
+  &:first-of-type{
+    justify-self: self-start;
+    grid-area: spanish;
+    border: 0;
+    text-align: left;
+  }
+  &:last-of-type{
+    justify-self: self-end;
+    grid-area: english;
+    border: 0;
+    text-align: right;
   }
 }
 .about__downloadCv {
@@ -109,20 +159,7 @@
   color: #393a6e;
   text-transform: uppercase;
 }
-.about__languages span {
-  text-align: center;
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: rgb(196, 196, 196);
-}
-.about__languages span:first-of-type{
-  text-align: left;
-  border: 0;
-}
-.about__languages span:last-of-type{
-  text-align: right;
-  border: 0;
-}
+
 .about__devSkills{
   text-align: left
 }

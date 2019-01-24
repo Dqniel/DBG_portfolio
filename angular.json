@@ -27,6 +27,11 @@
               "src/assets",
               "src/app/assets/images"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/styles"
+              ]
+            },
             "styles": [
               "node_modules/swiper/dist/css/swiper.min.css",
               "src/styles.scss"

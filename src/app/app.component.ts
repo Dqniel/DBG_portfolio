@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
       const b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
       const color2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
 
-      const elements_with_anim = <HTMLElement[]><any>document.querySelectorAll('.background_anim, .contact, .bg');
+      const elements_with_anim = <HTMLElement[]><any>document.querySelectorAll('.background_anim, .about__contact, .bg');
       elements_with_anim.forEach(el => {
         el.style.background = 'linear-gradient(135deg, ' + color1 + ' 0%,' + color2 + ' 100%)';
       });
